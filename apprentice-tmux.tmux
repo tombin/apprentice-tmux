@@ -29,7 +29,7 @@ set "status-justify" "left"
 set "status-left-length" "100"
 set "status-right-length" "100"
 set "status-right-attr" "none"
-
+set "status-style" "fg=$white,bg=$black"
 set "status-attr" "none"
 set "status-left-attr" "none"
 

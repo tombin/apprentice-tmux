@@ -1,12 +1,15 @@
 #!/bin/bash
+pure_black="#000000"
 black="#1c1c1c"
-blue="#61afef"
-yellow="#ff8700"
+blue="#8fafd7"
+orange="#ff8700"
 red="#800000"
+light_red="#af5f5f"
 white="#aab2bf"
 green="#87875f"
 visual_grey="#3e4452"
 comment_grey="#585858"
+light_green=#5f875f
 
 set() {
    local option=$1
@@ -27,38 +30,18 @@ set "status-left-length" "100"
 set "status-right-length" "100"
 set "status-right-attr" "none"
 
-set "message-fg" "$white"
-set "message-bg" "$black"
-
-set "message-command-fg" "$white"
-set "message-command-bg" "$black"
-
 set "status-attr" "none"
 set "status-left-attr" "none"
 
-setw "window-status-fg" "$black"
-setw "window-status-bg" "$black"
-setw "window-status-attr" "none"
-
-setw "window-status-activity-bg" "$black"
-setw "window-status-activity-fg" "$black"
-setw "window-status-activity-attr" "none"
-
-setw "window-status-separator" ""
-
+set "mode-style" "fg=$black,bg=$blue"
 set "window-style" "fg=$comment_grey"
 set "window-active-style" "fg=$white"
 
-set "pane-border-fg" "$white"
-set "pane-border-bg" "$black"
-set "pane-active-border-fg" "$green"
-set "pane-active-border-bg" "$black"
+set "pane-border-style" "fg=$white,bg=$pure_black"
+set "pane-active-border-style" "fg=$light_green,bg=$pure_black"
 
-set "display-panes-active-colour" "$yellow"
+set "display-panes-active-colour" "$light_red"
 set "display-panes-colour" "$blue"
-
-set "status-bg" "$black"
-set "status-fg" "$white"
 
 set "@prefix_highlight_fg" "$black"
 set "@prefix_highlight_bg" "$green"
@@ -68,7 +51,7 @@ set "@prefix_highlight_output_prefix" "  "
 time_format="%R"
 date_format="%d/%m/%Y"
 
-set "status-right" "#[fg=$white,bg=$black,nounderscore,noitalics]${time_format}  ${date_format} #[fg=$green,bg=$black,nobold,nounderscore,noitalics]#[fg=$black,bg=$green,bold] #h #[fg=$yellow, bg=$green]#[fg=$red,bg=$yellow]"
+set "status-right" "#[fg=$white,bg=$black,nounderscore,noitalics]${time_format}  ${date_format} #[fg=$green,bg=$black,nobold,nounderscore,noitalics]#[fg=$black,bg=$green,bold] #h #[fg=$orange, bg=$green]#[fg=$red,bg=$orange]"
 set "status-left" "#[fg=$black,bg=$green,bold] #S #{prefix_highlight}#[fg=$green,bg=$black,nobold,nounderscore,noitalics]"
 
 set "window-status-format" "#[fg=$black,bg=$black,nobold,nounderscore,noitalics]#[fg=$white,bg=$black] #I  #W #[fg=$black,bg=$black,nobold,nounderscore,noitalics]"

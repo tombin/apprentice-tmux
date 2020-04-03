@@ -23,6 +23,8 @@ setw() {
    tmux set-window-option -gq "$option" "$value"
 }
 
+set "message-style" "fg=$white,bg=$black"
+
 set "status" "on"
 set "status-justify" "left"
 
